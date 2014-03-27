@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Axel Practice Project</title>
+        <meta name="Description" content="My JavaScript Playground">
+        <script src="../JS Libraries/jquery-2.1.0.min.js"></script>
+        <script src="../JS Libraries/knockout-3.1.0.js"></script>       
+    </head>
+    <body>
+        <span id="jQuerySpan">jQuery?</span>
+        <span id="koSpan" data-bind="text: koSpan">KO?</span>
+    </body>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+		  $("#jQuerySpan").html("jQuery is working!");
+
+		  ko.applyBindings(new myViewModel());
+		});
+
+        function myViewModel(){
+        	var self = this;
+
+        	self.koSpan = ko.observable("KO is working!");
+        }
+    </script>
+</html>
