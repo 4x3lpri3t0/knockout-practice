@@ -19,7 +19,15 @@ Boilerplate for new projects:
       
     </body>
     <script type="text/javascript">
-      
+      $(document).ready(function() {
+		  
+        ko.applyBindings(new myViewModel());
+	  });
+
+      function myViewModel(){
+        var self = this;
+        
+      }
     </script>
 </html>
 ```
