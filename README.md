@@ -7,7 +7,7 @@ Just a repository that holds small ko projects in it. For fun and practicing pur
 Boilerplate for new projects:
 
 ------------------------------------------------------------------------------------------
-
+```html
 <html>
     <head>
         <title>Axel Practice Project</title>
@@ -22,3 +22,4 @@ Boilerplate for new projects:
       
     </script>
 </html>
+```
