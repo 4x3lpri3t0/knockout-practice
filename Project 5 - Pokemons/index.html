@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>Axel Practice Project</title>
+  <meta name="Description" content="My JavaScript Playground">
+  <script src="../JS Libraries/jquery-2.1.0.min.js"></script>
+  <script src="../JS Libraries/knockout-3.1.0.js"></script>
+  <script src="samplePokemons.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class='liveExample'> 
+
+    <table width='100%'>
+      <thead>
+        <tr>
+          <th width='25%'>Type</th>
+          <th width='25%'>Pokemon</th>
+          <th class='price' width='15%'>Price</th>
+          <th class='quantity' width='10%'>Quantity</th>
+          <th class='price' width='15%'>Subtotal</th>
+          <th width='10%'> </th>
+        </tr>
+      </thead>
+      <tbody data-bind='foreach: pokemonLines'>
+        <tr>
+          <td>
+            <select data-bind='options: samplePokemons, optionsText: "type", optionsCaption: "Select...", value: type'> </select>
+          </td>
+          <td data-bind="with: type">
+            <select data-bind='options: pokemons, optionsText: "name", optionsCaption: "Select...", value: $parent.pokemon'> </select>
+          </td>
+          <td class='power' data-bind='with: pokemon'>
+            <span data-bind='text: power'> </span>
+          </td>
+          <td class='quantity'>
+            <input data-bind='visible: pokemon, value: quantity, valueUpdate: "afterkeydown"' />
+          </td>
+          <td class='power'>
+            <span data-bind='visible: pokemon, text: subtotal()' > </span>
+          </td>
+          <td>
+            <a href='#' data-bind='click: $parent.removePokemon'>Remove</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p class='grandTotal'>
+      Total power: <span data-bind='text: grandTotal()'> </span>
+    </p>
+    <button data-bind='click: addPokemon'>Add pokemon</button>
+    <button data-bind='click: save'>Submit pokedex</button>
+    
+  </div>
+</body>
+</html>
