@@ -31,3 +31,7 @@ Boilerplate for new projects:
     </script>
 </html>
 ```
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Zedronar/knockout-practice/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
